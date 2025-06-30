@@ -1,5 +1,5 @@
 "use client"
-import React, { ReactNode, useRef } from "react";
+import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import gsap from "gsap"
@@ -73,8 +73,8 @@ export default function Home() {
           <div className="space-y-4 flex flex-col items-center justify-center w-full">
             <h2 className="text-5xl text-white font-bold">Transforming Ideas<br />
               into Stunning Visuals</h2>
-            <p className="text-white">"Creative graphic design, branding,and motion<br />
-              graphics that captivate and inspire."</p>
+            <p className="text-white">&quot;Creative graphic design, branding,and motion<br />
+              graphics that captivate and inspire.&quot;</p>
             <Button variant="secondary" className='md:text-lg text-2xl text-[#5858c3] font-bold p-5 cursor-pointer'>Contact Us</Button>
             <div className="flex items-center justify-center space-x-8">
               <Image

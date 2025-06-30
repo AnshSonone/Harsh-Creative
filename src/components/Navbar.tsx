@@ -9,7 +9,7 @@ const Navbar = () => {
   const [show, setShow] = useState('top-[-100%]')
 
   const toggleNav = () => {
-    show === 'top-[-100%]' ? setShow('top-[0%]') : setShow('top-[-100%]')
+    return show === 'top-[-100%]' ? setShow('top-[0%]') : setShow('top-[-100%]')
   }
 
   return (
