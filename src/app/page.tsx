@@ -70,12 +70,12 @@ export default function Home() {
     <div className="">
       <main className="my-6 md:my-2">
         <div ref={startPageRef} className="md:flex items-center justify-between space-y-18">
-          <div className="space-y-4 flex flex-col items-center justify-center w-full">
-            <h2 className="text-5xl text-white font-bold">Transforming Ideas<br />
+          <div className="space-y-4 flex flex-col items-center w-full">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl text-white font-bold text-start">Transforming Ideas<br />
               into Stunning Visuals</h2>
-            <p className="text-white">&quot;Creative graphic design, branding,and motion<br />
+            <p className="text-white">&quot;Creative graphic design, branding,and motion
               graphics that captivate and inspire.&quot;</p>
-            <Button variant="secondary" className='md:text-lg text-2xl text-[#5858c3] font-bold p-5 cursor-pointer'>Contact Us</Button>
+            <Button variant="secondary" className='text-lg md:text-xl text-[#5858c3] font-bold p-5 cursor-pointer mb-4'>Contact Us</Button>
             <div className="flex items-center justify-center space-x-8">
               <Image
                 src="/pinterst.svg"
@@ -110,8 +110,8 @@ export default function Home() {
           <div className="flex justify-end">
             <Image
               src="/frontpage.svg"
-              width={600}
-              height={400}
+              width={900}
+              height={900}
               alt="title_image"
               loading="lazy"
             />
@@ -123,19 +123,20 @@ export default function Home() {
               Projects</h2>
             <h2 className=" text-white">Explore our project collection, showcasing expert graphic design and video editing. Each creation highlights our commitment to crafting visuals that build trust, engage audiences, and bring ideas to life.</h2>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 justify-items-center space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center">
             {
               projects.map((element, index) => (
                 <div key={index}>
                   <Image
+                  className="rounded-3xl"
                     src={element.projectImg}
                     width={200}
                     height={200}
                     alt="project"
                     loading="lazy"
                   />
-                  <h4 className="text-white text-lg">{element.title}</h4>
-                  <h4 className="text-white">{element.link}</h4>
+                  <h4 className="text-white text-xl md:text-lg font-bold mt-2">{element.title}</h4>
+                  <Button variant="outline" className=' text-[#5858c3] font-bold p-3 cursor-pointer my-2'>View Project</Button>
                 </div>
               ))
             }
@@ -145,18 +146,19 @@ export default function Home() {
           <div className="grid justify-items-center my-4">
             <div>
               <h3 className="text-xl text-white">Testimonial</h3>
-              <h4 className="text-3xl text-white font-bold">Our Client Recommed us </h4>
+              <h4 className="text-2xl text-white font-bold">Our Client Recommed us </h4>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-4 space-x-4 mx-4">
+          <div className="grid md:grid-cols-2 gap-4 space-x-4 mx-10">
             {
               clients.map((element, index) => (
-                <div key={index} className="flex items-center space-x-4 my-4">
-                  <div>
+                <div key={index} className=" space-x-4 my-4">
+                  <div className="flex justify-center md:block">
                     <Image
+                    className="rounded-3xl"
                       src={element.clientImg}
-                      width={600}
-                      height={400}
+                      width={200}
+                      height={200}
                       alt="img"
                       loading="lazy"
                     />
