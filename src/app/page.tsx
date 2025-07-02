@@ -143,10 +143,10 @@ export default function Home() {
           </div>
         </div>
         <div ref={nextPageRef} className="my-14 opacity-0">
-          <div className="mx-8 md:mx-24 grid md:grid-cols-2 my-6">
+          <div className="mx-8 md:mx-26 grid md:grid-cols-2 my-6">
             <h2 className="text-3xl font-bold text-white my-4">Discover Our Best
               Projects</h2>
-            <h2 className=" text-white">Explore our project collection, showcasing expert graphic design and video editing. Each creation highlights our commitment to crafting visuals that build trust, engage audiences, and bring ideas to life.</h2>
+            <p className=" text-white md:mr-14">Explore our project collection, showcasing expert graphic design and video editing. Each creation highlights our commitment to crafting visuals that build trust, engage audiences, and bring ideas to life.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
             {
@@ -167,7 +167,7 @@ export default function Home() {
             }
           </div>
         </div>
-        <div ref={testimonialRef} className="my-14">
+        <div ref={testimonialRef} className="my-14 md:mx-14">
           <div className=" my-4">
             <div className="my-4 mx-8 md:mx-10">
               <h3 className="text-2xl lg:text-4xl font-bold text-white">Testimonial</h3>
