@@ -25,7 +25,6 @@ export default function Home() {
   const startPageRef = useRef<HTMLDivElement>(null)
   const nextPageRef = useRef<HTMLDivElement>(null)
   const testimonialRef = useRef<HTMLDivElement>(null)
-  const clientRef = useRef<HTMLDivElement>(null)
 
   gsap.registerPlugin(useGSAP, ScrollTrigger)
 
