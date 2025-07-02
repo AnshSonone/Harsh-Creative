@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} antialiased bg-[url("/background.png")] bg-cover bg-no-repeat `}
+        className={`${poppins.variable} antialiased bg-[url("/background.png")] bg-cover bg-no-repeat overflow-x-hidden`}
       >
         <Navbar />
         {children}

@@ -14,8 +14,8 @@ const Footer = () => {
   return (
     <div className=''>
         <div className='bg-zinc-400 flex flex-col space-y-4 items-center py-4'>
-            <h2 className='text-xl font-bold'>Let@apos;s Work <span className='text-[#869A59]'>Together</span></h2>
-            <Button variant="secondary" size="lg" className='md:text-lg text-2xl text-[#5858c3] font-bold p-5 cursor-pointer'>Contact Us</Button>
+            <h2 className='text-xl font-bold'>Let&apos;s Work <span className='text-[#869A59]'>Together</span></h2>
+            <Button variant="secondary" size="lg" className='text-lg md:text-xl text-[#5858c3] font-bold p-5 cursor-pointer'>Contact Us</Button>
         </div>
         <div className='bg-[#4545c7] space-y-4 p-4'>
             <div className='space-y-2'>
@@ -33,7 +33,7 @@ const Footer = () => {
                         alt='icon'
                         loading='lazy'
                     />
-                    <span className='mx-2  text-white font-bold'>{element.social}</span>
+                    <span className='mx-2 text-white font-bold'>{element.social}</span>
                 </div>
                     ))
                 }

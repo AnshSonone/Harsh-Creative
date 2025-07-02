@@ -13,6 +13,8 @@ export default function Home() {
     { projectImg: "/project2.svg", title: "Designs That Inspire Confidence", link: "View Project" },
     { projectImg: "/project2.svg", title: "Designs That Inspire Confidence", link: "View Project" },
     { projectImg: "/project3.svg", title: "Designs That Inspire Confidence", link: "View Project" },
+    { projectImg: "/project2.svg", title: "Designs That Inspire Confidence", link: "View Project" },
+    { projectImg: "/project3.svg", title: "Designs That Inspire Confidence", link: "View Project" },
   ]
 
   const clients = [
@@ -22,6 +24,8 @@ export default function Home() {
 
   const startPageRef = useRef<HTMLDivElement>(null)
   const nextPageRef = useRef<HTMLDivElement>(null)
+  const testimonialRef = useRef<HTMLDivElement>(null)
+  const clientRef = useRef<HTMLDivElement>(null)
 
   gsap.registerPlugin(useGSAP, ScrollTrigger)
 
@@ -37,43 +41,65 @@ export default function Home() {
 
     gsap.to(startPageRef.current, {
       x: 0,
-      opacity: 1,
+      opacity: 2,
       duration: 1,
       ease: "power3.in",
       stagger: 0.2,
     })
 
-  //   gsap.from(nextPageRef.current, {
-  //     x: -500,
-  //     opacity: 0,
-  //     duration: 1,
-  //     ease: "power3.out",
-  //     stagger: 0.2,
-  //   })
-  //   gsap.to(nextPageRef.current, {
-  //     scrollTrigger: {
-  //       trigger: nextPageRef.current,
-  //       toggleActions: "restart pause none none",
-  //       start: "top center",
-  //       end: "bottom",
-  //       markers: true
-  //     },
-  //     x: 0,
-  //     opacity: 1,
-  //     duration: 3,
-  //     ease: "power3.out",
-  //     stagger: 0.2,
-  //   })
+    gsap.from(nextPageRef.current, {
+      x: 500,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.2,
+    })
+    gsap.to(nextPageRef.current, {
+      scrollTrigger: {
+        trigger: nextPageRef.current,
+        toggleActions: "play none none none",
+        start: "top bottom",
+        end: "bottom",
+      },
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      ease: "power3.out",
+      stagger: 0.2,
+      
+    })
+
+    gsap.from(testimonialRef.current, {
+      x: -500,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.2,
+    })
+    gsap.to(testimonialRef.current, {
+      scrollTrigger: {
+        trigger: nextPageRef.current,
+        toggleActions: "play none none none",
+        start: "bottom bottom",
+        end: "bottom",
+      },
+      x: 0,
+      opacity: 1,
+      duration: 3,
+      ease: "power3.out",
+      stagger: 0.2,
+      
+    })
   })
 
   return (
     <div className="">
-      <main className="my-6 md:my-2">
+      <main className="my-6 md:my-2 relative">
         <div ref={startPageRef} className="md:flex items-center justify-between space-y-18">
-          <div className="space-y-4 flex flex-col items-center w-full">
-            <h2 className="text-3xl sm:text-5xl md:text-6xl text-white font-bold text-start">Transforming Ideas<br />
-              into Stunning Visuals</h2>
-            <p className="text-white">&quot;Creative graphic design, branding,and motion
+          <div className="space-y-4 flex flex-col items-center justify-center w-full">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-white font-bold text-start mx-8">Transforming Ideas
+              <br/>into Stunning Visuals</h2>
+            <p className="text-white mx-8">&quot;Creative graphic design, branding,and motion
               graphics that captivate and inspire.&quot;</p>
             <Button variant="secondary" className='text-lg md:text-xl text-[#5858c3] font-bold p-5 cursor-pointer mb-4'>Contact Us</Button>
             <div className="flex items-center justify-center space-x-8">
@@ -117,16 +143,16 @@ export default function Home() {
             />
           </div>
         </div>
-        <div ref={nextPageRef} className="my-14">
+        <div ref={nextPageRef} className="my-14 opacity-0">
           <div className="md:grid grid-cols-2 justify-items-center mx-4 my-6">
-            <h2 className="text-2xl font-bold text-white my-4">Discover Our Best
+            <h2 className="text-3xl font-bold text-white my-4">Discover Our Best
               Projects</h2>
             <h2 className=" text-white">Explore our project collection, showcasing expert graphic design and video editing. Each creation highlights our commitment to crafting visuals that build trust, engage audiences, and bring ideas to life.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
             {
               projects.map((element, index) => (
-                <div key={index}>
+                <div key={index} className="my-4 flex flex-col items-center md:block">
                   <Image
                   className="rounded-3xl"
                     src={element.projectImg}
@@ -135,18 +161,18 @@ export default function Home() {
                     alt="project"
                     loading="lazy"
                   />
-                  <h4 className="text-white text-xl md:text-lg font-bold mt-2">{element.title}</h4>
+                  <h4 className="text-white text-xl md:text-lg mt-2">{element.title}</h4>
                   <Button variant="outline" className=' text-[#5858c3] font-bold p-3 cursor-pointer my-2'>View Project</Button>
                 </div>
               ))
             }
           </div>
         </div>
-        <div className="my-14">
+        <div ref={testimonialRef} className="my-14">
           <div className="grid justify-items-center my-4">
-            <div>
-              <h3 className="text-xl text-white">Testimonial</h3>
-              <h4 className="text-2xl text-white font-bold">Our Client Recommed us </h4>
+            <div className="my-4">
+              <h3 className="text-2xl lg:text-4xl font-bold text-white">Testimonial</h3>
+              <h4 className="text-2xl text-white lg:text-4xl font-bold">Our Client Recommed us </h4>
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 space-x-4 mx-10">
@@ -164,7 +190,7 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <div className="flex items-center">
+                    <div className="flex items-center my-2 ">
                     {
                       element.star.map((e, i) => <div key={i} >
                         <Image
