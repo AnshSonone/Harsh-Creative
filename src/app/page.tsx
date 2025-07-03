@@ -132,8 +132,9 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end mx-6 md:mx-0">
             <Image
+              className="rounded-2xl md:rounded-none"
               src="/frontpage.svg"
               width={900}
               height={900}
