@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import Link from "next/link";
 
 export default function Home() {
 
@@ -102,6 +103,7 @@ export default function Home() {
               graphics that captivate and inspire.&quot;</p>
             <Button variant="secondary" className='text-lg md:text-xl text-[#5858c3] font-bold p-5 cursor-pointer mb-4'>Contact Us</Button>
             <div className="flex items-center justify-center space-x-8">
+              <Link href="https://www.pinterest.com/tobivisual01/?invite_code=174a809d6abe49bc912f288ad4e462c2&sender=1029143089757033614" target="#">
               <Image
                 src="/pinterst.svg"
                 width={60}
@@ -109,6 +111,8 @@ export default function Home() {
                 alt="title_image"
                 loading="lazy"
               />
+              </Link>
+              <Link href="https://www.instagram.com/tobi_visual_/?igsh=MWMycWFoYTYyb2s5bA%3D%3D#" target="#">
               <Image
                 src="/instagram.svg"
                 width={50}
@@ -116,6 +120,8 @@ export default function Home() {
                 alt="title_image"
                 loading="lazy"
               />
+              </Link>
+              <Link href="https://www.behance.net/gallery/220823141/Portfolio?fbclid=PAY2xjawI4wNFleHRuA2FlbQIxMQABpi2p70YgPmNS1zOdI0NVX9RwqfjIxjKrSfoK4fs9_Nig0IqdhR-LX_BYWA_aem_CJ1qm8Jh2BHETm9y3i8HEA" target="#">
               <Image
                 src="/be.svg"
                 width={50}
@@ -123,6 +129,8 @@ export default function Home() {
                 alt="title_image"
                 loading="lazy"
               />
+              </Link>
+              <Link href="https://wa.me/916263222207" target="#">
               <Image
                 src="/whatsapp.svg"
                 width={50}
@@ -130,6 +138,7 @@ export default function Home() {
                 alt="title_image"
                 loading="lazy"
               />
+              </Link>
             </div>
           </div>
           <div className="flex justify-end mx-6 md:mx-0">

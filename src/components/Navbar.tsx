@@ -14,9 +14,9 @@ const Navbar = () => {
 
   return (
     <div className='flex  flex-col md:flex-row items-center md:items-start md:justify-between justify-center px-10'>
-      <div className='md:mx-5 w-full flex items-center justify-between md:block md:w-fit'>
+      <div className='md:mx-5 w-full flex items-center justify-between md:block md:w-fit py-2'>
         <Image
-          src="/logo.png"
+          src="/logo_harsh.svg"
           width={100}
           height={100}
           loading='lazy'
