@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Harsh Creatives",
   description: "Harsh creatives is personal project for portfolio",
   icons: {
-    icon: "logo.png"
+    icon: "logo_harsh.svg"
   }
 };
 
