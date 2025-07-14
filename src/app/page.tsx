@@ -1,11 +1,12 @@
 "use client"
-import React, { useRef } from "react";
+import React, { Attributes, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 
@@ -26,6 +27,7 @@ export default function Home() {
   const startPageRef = useRef<HTMLDivElement>(null)
   const nextPageRef = useRef<HTMLDivElement>(null)
   const testimonialRef = useRef<HTMLDivElement>(null)
+  const footerSectionRef = useRef<HTMLDivElement>(null)
 
   gsap.registerPlugin(useGSAP, ScrollTrigger)
 
@@ -92,6 +94,12 @@ export default function Home() {
     })
   })
 
+  const scroolToSection = () => {
+    if(footerSectionRef.current){
+      footerSectionRef.current.scrollIntoView({behavior: "smooth"})
+    }
+  }
+
   return (
     <div className="">
       <main className="my-6 md:my-2 relative">
@@ -101,7 +109,7 @@ export default function Home() {
               <br/>into Stunning Visuals</h2>
             <p className="text-white mx-8">&quot;Creative graphic design, branding,and motion
               graphics that captivate and inspire.&quot;</p>
-            <Button variant="secondary" className='text-lg md:text-xl text-[#5858c3] font-bold p-5 cursor-pointer mb-4'>Contact Us</Button>
+            <Button onClick={scroolToSection} variant="secondary" className='text-lg md:text-xl text-[#5858c3] font-bold p-5 cursor-pointer mb-4'>Contact Us</Button>
             <div className="flex items-center justify-center space-x-8">
               <Link href="https://www.pinterest.com/tobivisual01/?invite_code=174a809d6abe49bc912f288ad4e462c2&sender=1029143089757033614" target="#">
               <Image
@@ -227,6 +235,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Footer footerSectionRef={footerSectionRef}/>
     </div>
   );
 }
