@@ -1,6 +1,10 @@
 # Client Portfolio Website
 A modern, responsive personal portfolio website designed and developed for a client to showcase their skills, projects, and professional experience online.
 
+## Live Demo
+View Live Site
+(https://project1-sigma-nine.vercel.app/)
+
 ## Project Overview
 This project delivers a clean, intuitive user interface with smooth navigation and dynamic content sections. The site helps the client highlight their work effectively and provides visitors with a seamless browsing experience on all devices.
 
@@ -32,10 +36,6 @@ This project delivers a clean, intuitive user interface with smooth navigation a
 + GSAP
 + shadcn/ui
 + Git & GitHub
-
-## Live Demo
-View Live Site
-(https://project1-sigma-nine.vercel.app/)
 
 🤝 Credits
 Designed & developed by Ansh Sonone
