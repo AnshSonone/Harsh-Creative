@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Client Portfolio Website
+A modern, responsive personal portfolio website designed and developed for a client to showcase their skills, projects, and professional experience online.
 
-## Getting Started
+## Live Demo
+View Live Site
+(https://project1-sigma-nine.vercel.app/)
 
-First, run the development server:
+## Project Overview
+This project delivers a clean, intuitive user interface with smooth navigation and dynamic content sections. The site helps the client highlight their work effectively and provides visitors with a seamless browsing experience on all devices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
++ Next.js – Server-side rendering (SSR) and static site generation (SSG)
++ React.js – Component-based UI
++ Tailwind CSS – Utility-first CSS framework for modern, responsive design
++ GSAP (GreenSock Animation Platform) – Smooth scroll and entrance animations
++ shadcn/ui – Accessible, reusable UI components
++ Git & GitHub – Version control and collaboration
++ Vercel – Deployment and hosting
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
++ Modern & Responsive Design — Fully responsive across devices using Tailwind CSS and modern UI/UX principles.
++ Server-side Rendering & Static Generation — Built with Next.js for high performance and SEO-friendly pages.
++ Dynamic Content — Easily updatable project sections for showcasing new work.
++ Smooth Animations — Scroll animations and transitions powered by GSAP.
++ Continuous Deployment — Deployed on Vercel for seamless updates and high availability.
++ Version Control — Integrated with Git & GitHub for robust code management.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Skills Used
+### Technologies:
++ HTML5
++ CSS3
++ JavaScript (ES6+)
++ React.js
++ Next.js
++ Tailwind CSS
++ GSAP
++ shadcn/ui
++ Git & GitHub
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🤝 Credits
+Designed & developed by Ansh Sonone
+For Tobi visuals
 
-## Learn More
+📬 Contact
+Developer: sononeansh@gmail.com
 
-To learn more about Next.js, take a look at the following resources:
+Portfolio: (https://my-portfolio-eosin-pi-21.vercel.app/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+LinkedIn: (https://www.linkedin.com/in/anshsonone/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Email: sononeansh@gmail.com
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ using Next.js, React, Tailwind CSS, GSAP, and Vercel
