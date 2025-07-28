@@ -3,11 +3,11 @@ import { Button } from './ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
 
-interface FooterProps {
-    footerSectionRef: RefObject<HTMLDivElement>
-  }
+// interface FooterProps {
+//     footerSectionRef: RefObject<HTMLDivElement>
+//   }
 
-const Footer: React.FC<FooterProps> = ({footerSectionRef}) => {
+const Footer = () => {
 
     const socialLinks = [
         { icon: "/pinterst.svg", social: "Pinterst", link: "https://www.pinterest.com/tobivisual01/?invite_code=174a809d6abe49bc912f288ad4e462c2&sender=1029143089757033614" },
@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = ({footerSectionRef}) => {
     ]
 
     return (
-        <div ref={footerSectionRef} className=''>
+        <div className=''>
             <div className='bg-zinc-400 flex flex-col space-y-4 items-center py-4'>
                 <h2 className='text-xl font-bold'>Let&apos;s Work <span className='text-[#b3ff00]'>Together</span></h2>
                 <Link href="tel: +62632 22207">

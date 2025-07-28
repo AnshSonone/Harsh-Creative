@@ -1,21 +1,18 @@
 "use client"
-import React, { Attributes, useRef } from "react";
+import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Link from "next/link";
-import Footer from "@/components/Footer";
 
 export default function Home() {
 
   const projects = [
     { projectImg: "/project1.svg", title: "Designs That Inspire Confidence", link: "View Project" },
     { projectImg: "/project2.svg", title: "Designs That Inspire Confidence", link: "View Project" },
-    { projectImg: "/project2.svg", title: "Designs That Inspire Confidence", link: "View Project" },
-    { projectImg: "/project3.svg", title: "Designs That Inspire Confidence", link: "View Project" },
-    { projectImg: "/project2.svg", title: "Designs That Inspire Confidence", link: "View Project" },
+    { projectImg: "/graphic_2.png", title: "Designs That Inspire Confidence", link: "View Project" },
     { projectImg: "/project3.svg", title: "Designs That Inspire Confidence", link: "View Project" },
   ]
 
@@ -27,7 +24,7 @@ export default function Home() {
   const startPageRef = useRef<HTMLDivElement>(null)
   const nextPageRef = useRef<HTMLDivElement>(null)
   const testimonialRef = useRef<HTMLDivElement>(null)
-  const footerSectionRef = useRef<HTMLDivElement>(null)
+  // const footerSectionRef = useRef<HTMLElement>(null)
 
   gsap.registerPlugin(useGSAP, ScrollTrigger)
 
@@ -94,14 +91,13 @@ export default function Home() {
     })
   })
 
-  const scroolToSection = () => {
-    if(footerSectionRef.current){
-      footerSectionRef.current.scrollIntoView({behavior: "smooth"})
-    }
-  }
+  // const scroolToSection = () => {
+  //   if(footerSectionRef.current){
+  //     footerSectionRef.current.scrollIntoView({behavior: "smooth"})
+  //   }
+  // }
 
   return (
-    <div className="">
       <main className="my-6 md:my-2 relative">
         <div ref={startPageRef} className="md:flex items-center justify-between space-y-18">
           <div className="space-y-4 flex flex-col items-center justify-center w-full">
@@ -109,7 +105,7 @@ export default function Home() {
               <br/>into Stunning Visuals</h2>
             <p className="text-white mx-8">&quot;Creative graphic design, branding,and motion
               graphics that captivate and inspire.&quot;</p>
-            <Button onClick={scroolToSection} variant="secondary" className='text-lg md:text-xl text-[#5858c3] font-bold p-5 cursor-pointer mb-4'>Contact Us</Button>
+            <Button variant="secondary" className='text-lg md:text-xl text-[#5858c3] font-bold p-5 cursor-pointer mb-4'>Contact Us</Button>
             <div className="flex items-center justify-center space-x-8">
               <Link href="https://www.pinterest.com/tobivisual01/?invite_code=174a809d6abe49bc912f288ad4e462c2&sender=1029143089757033614" target="#">
               <Image
@@ -161,12 +157,12 @@ export default function Home() {
           </div>
         </div>
         <div ref={nextPageRef} className="my-14 opacity-0">
-          <div className="mx-8 md:mx-26 grid md:grid-cols-2 my-6">
+          <div className="mx-8 md:mx-26 grid md:grid-cols-2 my-14">
             <h2 className="text-3xl font-bold text-white my-4">Discover Our Best
               Projects</h2>
             <p className=" text-white md:mr-14">Explore our project collection, showcasing expert graphic design and video editing. Each creation highlights our commitment to crafting visuals that build trust, engage audiences, and bring ideas to life.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center">
             {
               projects.map((element, index) => (
                 <div key={index} className="my-4 flex flex-col items-center md:block">
@@ -183,6 +179,8 @@ export default function Home() {
                 </div>
               ))
             }
+          </div>
+          <div>
           </div>
         </div>
         <div ref={testimonialRef} className="my-14 md:mx-14">
@@ -235,7 +233,5 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <Footer footerSectionRef={footerSectionRef}/>
-    </div>
   );
 }
