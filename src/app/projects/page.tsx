@@ -38,12 +38,12 @@ const Projects = () => {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="relative h-64 w-full rounded-xl overflow-hidden bg-center bg-cover shadow-lg cursor-pointer"
+            className="relative h-64 w-full rounded-xl overflow-hidden bg-center bg-cover shadow-lg"
             style={{ backgroundImage: `url('${project.projectImg}')` }}
           >
             <div className="absolute inset-0 flex flex-col justify-end items-center bg-black/40 p-4">
               <span className="text-white font-semibold">{project.title}</span>
-              <Link href={project.projectImg} target='#' download={project.projectImg}><Button variant={'secondary'} >Download</Button></Link>
+              <Link href={project.projectImg} target='#' download={project.projectImg}><Button variant={'secondary'} className='cursor-pointer'>Download</Button></Link>
             </div>
           </div>
         ))}

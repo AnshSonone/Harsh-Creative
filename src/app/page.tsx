@@ -169,13 +169,13 @@ export default function Home() {
                   <Image
                   className="rounded-3xl"
                     src={element.projectImg}
-                    width={200}
+                    width={150}
                     height={200}
                     alt="project"
                     loading="lazy"
                   />
                   <h4 className="text-white text-xl md:text-lg mt-2">{element.title}</h4>
-                  <Button variant="outline" className=' text-[#5858c3] font-bold p-3 cursor-pointer my-2'>View Project</Button>
+                  <Link href={"/projects"}><Button variant="outline" className=' text-[#5858c3] font-bold p-3 cursor-pointer my-2'>View Project</Button></Link>
                 </div>
               ))
             }

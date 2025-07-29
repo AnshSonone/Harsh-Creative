@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { Button } from './ui/button'
+import Link from 'next/link'
 
 const Navbar = () => {
 
@@ -30,8 +31,8 @@ const Navbar = () => {
       </div>
       <div className={`absolute ${show} bg-[#4545c7]/40 backdrop-blur-xs z-10 space-y-10 flex flex-col items-center justify-center py-6 w-full h-[50%] transition-all ease-in-out delay-150 duration-200 md:flex-row md:relative md:bg-transparent md:backdrop-blur-none md:items-start md:justify-between`}>
         <div className='flex flex-col justify-center items-center font-bold md:flex-row md:items-start md:space-x-14 space-y-10 md:text-lg text-2xl text-white'>
-          <li className='list-none cursor-pointer hover:text-zinc-200'>Home
-          </li>
+          <Link href={'/'}><li className='list-none cursor-pointer hover:text-zinc-200'>Home
+          </li></Link>
           <li className='list-none cursor-pointer hover:text-zinc-200'>Services</li>
           <li className='list-none cursor-pointer hover:text-zinc-200'>About Us</li>
         </div>
