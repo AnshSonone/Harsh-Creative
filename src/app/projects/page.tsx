@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Share } from "lucide-react"
 
 const projects = [
   { projectImg: "/graphic_1.png", title: "Burger Modern Poster Design" },
@@ -32,17 +34,29 @@ const Projects = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+
         {projects.map((project, i) => (
           <div
             key={i}
             className="relative h-64 w-full rounded-xl overflow-hidden bg-center bg-cover shadow-lg"
             style={{ backgroundImage: `url('${project.projectImg}')` }}
           >
-            <div className="absolute inset-0 flex flex-col justify-end items-center bg-black/40 p-4">
-              <span className="text-white font-semibold">{project.title}</span>
-              <Link href={project.projectImg} target='#' download={project.projectImg}><Button variant={'secondary'} className='cursor-pointer'>Download</Button></Link>
+            <div className="absolute inset-0 flex flex-col justify-between items-center bg-black/40 p-4 space-y-2">
+              <div className='flex flex-col items-end justify-center w-full space-y-2'>
+                <Share className='text-white'/>
+                <Image
+                  src={'/logo_harsh.svg'}
+                  width={40}
+                  height={40}
+                  loading={'lazy'}
+                  alt='logo'
+                />
+              </div>
+              <div className='flex flex-col items-center space-y-2'>
+                <span className="text-white font-semibold">{project.title}</span>
+                <Link href={project.projectImg} target='#' download={project.projectImg}><Button variant={'secondary'} className='cursor-pointer'>View</Button></Link>
+              </div>
             </div>
           </div>
         ))}
