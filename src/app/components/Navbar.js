@@ -23,8 +23,8 @@ export default function Navbar() {
       <header className="flex items-center justify-between px-6 sm:px-12 py-4 bg-zinc-950 border-b border-zinc-900">
         {/* Logo */}
         <div>
-          <h1 className="text-[#c8f400] font-black text-sm sm:text-2xl lg:text-3xl tracking-tight cursor-pointer">
-            <i>HARSH CREATIVE'S</i>
+          <h1 className="text-[#c8f400] font-black text-sm sm:text-xl tracking-tight cursor-pointer">
+            <i>HARSH CREATE'S</i>
           </h1>
         </div>
 

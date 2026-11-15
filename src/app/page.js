@@ -16,11 +16,47 @@ import SelectInput from "./components/SelectInput";
 import { useScrollTO } from "./context/ScrollTO";
 import CleanYouTubePlayer from "./components/CleanYoutubePlayer";
 
+const stats = [
+  { value: 1.5, label: ["Years", "Experience"] },
+  { value: 180, label: ["Videos", "Edited"] },
+  { value: 4, label: ["Niches", "Mastered"] },
+  { value: 2, label: ["Pro", "Softwares"] },
+];
+
 const projects = [
   "z5WgjbU6PYU?si=zVk_MJAFfHoJNAkw",
   "OmRg8kqcgDE?si=BKImHKGBXGBFTMZH",
   "eGMfDUozwE8?si=KwB2fEGAiDanBLlL",
   "OmRg8kqcgDE?si=uS-rSvElwiowziGP",
+];
+
+const process = [
+  {
+    step: "01",
+    icon: "💬",
+    title: "Consultation",
+    description: "Discuss your video requirements and goals.",
+  },
+  {
+    step: "02",
+    icon: "🎬",
+    title: "Share Raw Content",
+    description:
+      "Send your raw clips, music preference, and any reference videos.",
+  },
+  {
+    step: "03",
+    icon: "✂️",
+    title: "Editing",
+    description:
+      "I cut, color grade, and polish your video using Premiere Pro or After Effects.",
+  },
+  {
+    step: "04",
+    icon: "📦",
+    title: "Delivery",
+    description: "Receive your final edited video.",
+  },
 ];
 
 const pricingCards = [
@@ -87,13 +123,6 @@ const pricingCards = [
   },
 ];
 
-const stats = [
-  { value: 1.5, label: ["Years", "Experience"] },
-  { value: 50, label: ["Videos", "Edited"] },
-  { value: 3, label: ["Niches", "Mastered"] },
-  { value: 2, label: ["Pro", "Softwares"] },
-];
-
 const contactDetails = [
   {
     icon: <Phone size={25} className="text-red-500" />,
@@ -103,12 +132,12 @@ const contactDetails = [
   {
     icon: <Mail size={25} className="text-zinc-500" />,
     title: "Email",
-    number: "Example.com@gmail.com",
+    number: "harshkoshta91@gmail.com",
   },
   {
     icon: <MapPin size={25} className="text-zinc-500" />,
     title: "LOCATION",
-    number: "Madhya Pradesh, India",
+    number: "Jabalpur, Madhya Pradesh, India",
   },
   {
     icon: <Clock size={25} className="text-zinc-500" />,
@@ -207,9 +236,11 @@ export default function Home() {
 
             {/* Bio Paragraph (Responsive width constraints updated) */}
             <p className="text-gray-400 text-base lg:text-lg max-w-full md:max-w-[60%] lg:max-w-[45%] my-6 leading-relaxed">
-              Based in Haryana, India. I craft high-retention short-form videos
-              for gym & fitness, travel, and lifestyle brands — using DaVinci
-              Resolve & CapCut.
+              Based in Jabalpur, Madhya Pradesh, India. I’m a Video Editor
+              crafting high-retention, engaging short-form videos for Education,
+              Talking-Head UGC & Real Estate brands. Using -{" "}
+              <span className="font-bold">Adobe Premiere Pro </span>&{" "}
+              <span className="font-bold">After Effects</span>.
             </p>
 
             {/* Call to Actions Buttons */}
@@ -277,6 +308,41 @@ export default function Home() {
           </FadeIn>
         </div>
 
+        {/* PROCESS */}
+        <div className="my-16 mx-10 lg:mx-16">
+          <div>
+            <h3 className="text-[#c8f400] font-semibold">
+              <span className="pr-4 ">//</span>HOW I WORK
+            </h3>
+            <h2 className="text-5xl font-bold my-4">MY PROCESS</h2>
+          </div>
+
+          <FadeIn>
+            <div className="sm:grid sm:grid-cols-2 md:grid-cols-4 gap-2 mt-12">
+              {process.map((step, index) => (
+                <div key={index} className="bg-gray-900 space-y-4 py-8 p-8">
+                  <div className="flex justify-between">
+                    <span className="block mb-4 text-3xl w-fit">
+                      {step.icon}
+                    </span>
+                    <h2 className="bg-linear-to-r from-lime-800 to-lime-400 bg-clip-text text-transparent text-5xl font-bold inline-block">
+                      <i>{step.step}</i>
+                    </h2>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-400 mt-2 text-sm">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+
         {/* ABOUT */}
         <div className="my-16 mx-10 lg:mx-16" id="about">
           <div>
@@ -291,7 +357,7 @@ export default function Home() {
               <div className="space-y-10 my-12 text-gray-400">
                 <p>
                   I'm <span className="text-white font-bold">Harsh</span>, a
-                  freelance video editor from Haryana, India with{" "}
+                  freelance video editor from Madhya Pradesh, India with{" "}
                   <span className="text-white font-bold">1.5 years</span> of
                   hands-on experience turning raw footage into scroll-stopping
                   short-form content.
@@ -299,7 +365,11 @@ export default function Home() {
 
                 <p>
                   I specialize in{" "}
-                  <span className="text-white font-bold">gym & fitness</span>{" "}
+                  <span className="text-white font-bold">
+                    Education, Talking-Head UGC & Real Estate brands.
+                    Specialized in storytelling, engaging hooks, smooth
+                    transitions, motion graphics, and scroll-stopping visuals.
+                  </span>{" "}
                   transformation videos,{" "}
                   <span className="text-white font-bold">travel</span> reels
                   with cinematic color grades, and{" "}
@@ -309,26 +379,27 @@ export default function Home() {
                 </p>
 
                 <p>
-                  My workflow is built around{" "}
-                  <span className="text-white font-bold">DaVinci</span> Resolve
-                  for professional color grading and{" "}
-                  <span className="text-white font-bold">CapCut</span> for
-                  quick, punchy edits — whatever gets the best result for your
-                  content.
+                  My workflow is powered by{" "}
+                  <span className="text-white font-bold">
+                    Adobe Premiere Pro
+                  </span>{" "}
+                  for professional video editing and{" "}
+                  <span className="text-white font-bold">After Effects</span>{" "}
+                  for motion graphics, animations, and advanced visual effects.
                 </p>
 
                 <div className="grid grid-cols-2 gap-5">
                   <button className="border border-[#c8f400]/30 rounded-full px-4 py-1.5 text-xs lg:text-lg text-[#c8f400] font-bold bg-[#c8f400]/5 hover:bg-[#c8f400]/10 transition-colors duration-200">
-                    GYM-Fitness
+                    Education
                   </button>
                   <button className="flex items-center justify-center gap-2 border border-[#c8f400]/30 rounded-full px-4 py-1.5 text-xs lg:text-lg text-red-400 font-bold bg-[#c8f400]/5 hover:bg-[#c8f400]/10 transition-colors duration-200">
-                    Travel
+                    Talking Head UGC
                   </button>
                   <button className="flex items-center justify-center gap-2 border border-[#c8f400]/30 rounded-full px-4 py-1.5 text-xs lg:text-lg text-cyan-400 font-bold bg-[#c8f400]/5 hover:bg-[#c8f400]/10 transition-colors duration-200">
-                    GYM-Fitness
+                    Real Estate Brands
                   </button>
                   <button className="flex items-center justify-center gap-2 border border-[#c8f400]/30 rounded-full px-4 py-1.5 text-xs lg:text-lg text-purple-400 font-bold bg-[#c8f400]/5 hover:bg-[#c8f400]/10 transition-colors duration-200">
-                    GYM-Fitness
+                    Short-Form Content
                   </button>
                 </div>
               </div>
@@ -370,7 +441,7 @@ export default function Home() {
 
                 <div>
                   <div className="flex items-center justify-between my-2">
-                    <h2 className="font-bold">Devinchi Resolve</h2>
+                    <h2 className="font-bold">Adobe Premiere Pro</h2>
                     <span className="text-[#c8f400] font-bold">90%</span>
                   </div>
                   <div className="relative flex items-center w-[96%] h-4">
@@ -387,7 +458,7 @@ export default function Home() {
 
                 <div>
                   <div className="flex items-center justify-between my-2">
-                    <h2 className="font-bold">CapCat</h2>
+                    <h2 className="font-bold">After Effects</h2>
                     <span className="text-[#c8f400] font-bold">92%</span>
                   </div>
                   <div className="relative flex items-center w-[96%] h-4">
