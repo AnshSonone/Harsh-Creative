@@ -298,7 +298,7 @@ export default function Home() {
             <h2 className="text-5xl font-bold my-4">PROJECTS</h2>
           </div>
           <FadeIn>
-            <div className="sm:grid gap-8 sm:grid-cols-2 md:grid-cols-4 my-12">
+            <div className="sm:grid gap-8 space-y-8 sm:space-y-0 sm:grid-cols-2 md:grid-cols-4 my-12">
               {projects.map((project, index) => (
                 <div key={index} className="w-full max-w-62 mx-auto">
                   <CleanYouTubePlayer videoId={project.slice(0, 11)} />
@@ -318,7 +318,7 @@ export default function Home() {
           </div>
 
           <FadeIn>
-            <div className="sm:grid sm:grid-cols-2 md:grid-cols-4 gap-2 mt-12">
+            <div className="sm:grid space-y-2 sm:space-y-0 sm:grid-cols-2 md:grid-cols-4 gap-2 mt-12">
               {process.map((step, index) => (
                 <div key={index} className="bg-gray-900 space-y-4 py-8 p-8">
                   <div className="flex justify-between">
@@ -522,7 +522,7 @@ export default function Home() {
                     {c.servies.map((s, i) => (
                       <button
                         key={i}
-                        className="flex items-center text-zinc-400"
+                        className="flex items-center text-start text-zinc-400"
                       >
                         <CircleCheck
                           size={20}
