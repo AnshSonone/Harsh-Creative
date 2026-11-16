@@ -24,10 +24,10 @@ const stats = [
 ];
 
 const projects = [
-  "z5WgjbU6PYU?si=zVk_MJAFfHoJNAkw",
-  "OmRg8kqcgDE?si=BKImHKGBXGBFTMZH",
+  "oYnncvMEaFY?si=TR1HwpLOmdV-Xiho",
   "eGMfDUozwE8?si=KwB2fEGAiDanBLlL",
-  "OmRg8kqcgDE?si=uS-rSvElwiowziGP",
+  "qusIm8FM868?si=ngiGTey7KhHufXfM",
+  "meUZMtYIzkY?si=MtN4Fwd7PB2CMhrN"
 ];
 
 const process = [
@@ -77,7 +77,7 @@ const pricingCards = [
   },
   {
     icon: "🎬",
-    title: "AESTHETIC EDIT",
+    title: "High-End Edit",
     description: "Best for creators",
     line: "Premium editing with dynamic, polished color grading sound design and visual storytelling.",
     servies: [
@@ -125,24 +125,28 @@ const pricingCards = [
 
 const contactDetails = [
   {
-    icon: <Phone size={25} className="text-red-500" />,
+    icon: <Phone size={25} className="text-red-400" />,
     title: "PHONE / WHATSAPP",
     number: "+91 626322207",
+    liked: "tel:+91626322207"
   },
   {
-    icon: <Mail size={25} className="text-zinc-500" />,
+    icon: <Mail size={25} className="text-cyan-400" />,
     title: "Email",
     number: "harshkoshta91@gmail.com",
+    liked: "malito:harshkoshta91@gmail.com"
   },
   {
-    icon: <MapPin size={25} className="text-zinc-500" />,
+    icon: <MapPin size={25} className="text-lime-400" />,
     title: "LOCATION",
     number: "Jabalpur, Madhya Pradesh, India",
+    linked: null
   },
   {
-    icon: <Clock size={25} className="text-zinc-500" />,
+    icon: <Clock size={25} className="text-purple-400" />,
     title: "RESPONSE TIME",
     number: "Within 24 Hours",
+    linked: null
   },
 ];
 
@@ -231,7 +235,7 @@ export default function Home() {
             <h2 className="text-gray-300 text-lg lg:text-2xl font-normal my-6">
               Hi, I'm{" "}
               <span className="text-[#c8f400] font-semibold">Harsh</span> —
-              Freelance Short-Form Content Creator
+              Freelance Video Editor & Content Creator
             </h2>
 
             {/* Bio Paragraph (Responsive width constraints updated) */}
@@ -253,7 +257,7 @@ export default function Home() {
                     .scrollIntoView({ behavior: "smooth" })
                 }
               >
-                View Pricing
+                View Packages
               </button>
               <button
                 className="flex items-center justify-center border border-white/10 rounded-xl px-6 lg:px-8 py-3 text-sm lg:text-base font-bold bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer"
@@ -367,13 +371,12 @@ export default function Home() {
                   I specialize in{" "}
                   <span className="text-white font-bold">
                     Education, Talking-Head UGC & Real Estate brands.
-                    Specialized in storytelling, engaging hooks, smooth
-                    transitions, motion graphics, and scroll-stopping visuals.
-                  </span>{" "}
+                    Specialized in storytelling, smooth
+                    transitions, motion graphics </span>{" "}
                   transformation videos,{" "}
-                  <span className="text-white font-bold">travel</span> reels
+                  and reels
                   with cinematic color grades, and{" "}
-                  <span className="text-white font-bold">lifestyle</span>{" "}
+                  {" "}
                   content with fast-paced cuts built for social media
                   engagement.
                 </p>
@@ -494,14 +497,14 @@ export default function Home() {
           </FadeIn>
         </div>
 
-        {/* PRICING */}
+        {/* PACKAGES */}
 
-        <div className="px-14" id="pricing">
+        <div className="px-14" id="packages">
           <div className="space-y-2 my-16">
             <h3 className="text-[#c8f400] font-semibold text-sm">
               // WHAT I OFFER
             </h3>
-            <h2 className="text-5xl font-bold">PRICING</h2>
+            <h2 className="text-5xl font-bold">PACKAGES</h2>
           </div>
 
           <FadeIn>
@@ -562,12 +565,12 @@ export default function Home() {
                 >
                   <div className="flex items-center space-x-4">
                     {c.icon}
-                    <div className="m-0 p-0 leading-5">
+                    <a className="" href={c.linked} target="_blank" rel="noopener noreferrer"><div className="m-0 p-0 leading-5">
                       <span className="text-zinc-500">
                         <i>{c.title}</i>
                       </span>
                       <h2>{c.number}</h2>
-                    </div>
+                    </div></a>
                   </div>
                 </div>
               ))}
@@ -604,16 +607,16 @@ export default function Home() {
                 label="SERVICE"
                 options={[
                   {
-                    value: "⚡ Basic Edit — ₹400/video",
-                    label: "⚡ Basic Edit — ₹400/video",
+                    value: "⚡ Basic Edit",
+                    label: "⚡ Basic Edit",
                   },
                   {
-                    value: "🎬 Aesthetic Edit — ₹1000/video",
-                    label: "🎬 Aesthetic Edit — ₹1000/video",
+                    value: "🎬 High-End Edit",
+                    label: "🎬 High-End Edit",
                   },
                   {
-                    value: "🚀 Monthly Package — ₹4000/mo",
-                    label: "🚀 Monthly Package — ₹4000/mo",
+                    value: "🚀 Monthly Package",
+                    label: "🚀 Monthly Package",
                   },
                   { value: "Something Custom", label: "Something Custom" },
                 ]}

@@ -5,7 +5,7 @@ import { useScrollTO } from '../context/ScrollTO';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const navItems = ["ABOUT", "PROJECTS", "CONTACT"]
+  const navItems = ["ABOUT", "PACKAGES", "CONTACT"]
 
   const {setScrollTo} = useScrollTO();
 
@@ -24,7 +24,7 @@ export default function Navbar() {
         {/* Logo */}
         <div>
           <h1 className="text-[#c8f400] font-black text-sm sm:text-xl tracking-tight cursor-pointer">
-            <i>HARSH CREATE'S</i>
+            HARSH KOSHTA
           </h1>
         </div>
 
