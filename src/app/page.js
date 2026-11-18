@@ -25,7 +25,7 @@ const stats = [
 
 const projects = [
   "oYnncvMEaFY?si=TR1HwpLOmdV-Xiho",
-  "eGMfDUozwE8?si=KwB2fEGAiDanBLlL",
+  "s8GIPYdXbWg?si=kseUO-XZAFdHc394",
   "qusIm8FM868?si=ngiGTey7KhHufXfM",
   "meUZMtYIzkY?si=MtN4Fwd7PB2CMhrN"
 ];
@@ -253,7 +253,7 @@ export default function Home() {
                 className="flex items-center justify-center border border-[#c8f400] rounded-xl px-6 lg:px-8 py-3 text-sm lg:text-base text-black bg-[#c8f400] font-bold hover:bg-transparent hover:text-[#c8f400] transition-all duration-300 shadow-lg shadow-[#c8f400]/10 cursor-pointer"
                 onClick={() =>
                   document
-                    .getElementById("pricing")
+                    .getElementById("packages")
                     .scrollIntoView({ behavior: "smooth" })
                 }
               >
